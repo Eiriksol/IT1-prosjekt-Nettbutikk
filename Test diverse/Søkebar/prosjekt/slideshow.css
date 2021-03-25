@@ -93,3 +93,25 @@
   .selected {
     background-color: #CB411F;
   }
+
+/* body{
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+} */
+
+/*-----------------------------------------------------*/
+/*Om produktet-side */
+
+
+.om-produktet-box {
+  display: flex;
+}
+
+.pil-oppover{
+  padding: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
