@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    word-wrap: break-word;
+    width: 90%;
+    padding: 2rem 0;
+  }
+  
+  .wrapper,
+  .container {
+    margin: 0 auto;
+  }
+  
+  .container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    max-width: 32.5rem;
+    height: 35.1875rem;
+    line-height: 0;
+  }
+  
+  .slideDiv,
+  .controls {
+    position: absolute;
+  }
+  
+  .slideDiv,
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    background-size: cover;
+  }
+  
+  .slide:first-child {
+    background: url(bilder/no-galaxy-s20-fe-g780-sm-g780fzbdeub-frontcloudnavy-303565812.webp) no-repeat center;
+  }
+  
+  .slide:nth-of-type(2) {
+    background: url(bilder/no-galaxy-s20-plus-5g-g986-sm-g986bzpdeud-frontbpurple-266381157.webp) no-repeat center;
+  }
+  
+  .slide:nth-of-type(3) {
+    background: url(bilder/no-galaxy-s20-plus-5g-g986-sm-g986bzpdeud-frontbpurple-266381169.webp) no-repeat center;
+  }
+  
+  .slide:last-child {
+    background: url(bilder/no-galaxy-s20-plus-5g-g986-sm-g986bzpdeud-frontbpurple-266381157.webp) no-repeat center;
+  }
+  
+  .controls {
+    top: 41%;
+    right: 0;
+    padding: 0 0.63rem;
+    z-index: 5;
+    text-align: center;
+  }
+  
+  .button { 
+    width: 0.9375rem;
+    height: 0.9375rem;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all ease .2s;
+  }
+  
+  .button:not(:last-child) {
+    margin-bottom: 0.63rem;
+  }
+  
+  
+  /***Colors***/
+
+
+  .button {
+    border: 1px solid #fff;
+    opacity: .6;
+    outline: none;
+    background-color: #333;
+  }
+  
+  .button:hover,
+  .button:focus {
+    opacity: 1;
+  }
+  
+  .selected {
+    background-color: #CB411F;
+  }
+
+
+
+/* ------------------------------------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Slideshow Slideshow Overskrift Overskrift"
+    "Slideshow Slideshow Informasjon Informasjon"
+    "Slideshow Slideshow Fargevalg Fargevalg"
+    "Slideshow Slideshow Fargevalg Fargevalg";
+}
+.Slideshow { grid-area: Slideshow; }
+.Overskrift { grid-area: Overskrift; }
+.Informasjon { grid-area: Informasjon; }
+.Fargevalg { grid-area: Fargevalg; }
+
+.Overskrift{
+    margin-top: 10%;
+    /* font-size:--; */
+}
+
+.Informasjon{
+    margin-top: 20px;
+}
+
+.fargevalg-button{
+    background:    #ffffff;
+    border:        1px solid #000000;
+    border-radius: 11px;
+    padding:       5px 30px;
+    color:         #000000;
+    display:       inline-block;
+    font:          normal bold 15px "Open Sans", sans-serif;
+    text-align:    center;
+    width: 140px;
+}
+
+.fargevalg-tekst{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bilde-fargevalg{
+    width: 20px;
+}
+
+.fargevalg-boks{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+    justify-content: space-between;
+    
+}
