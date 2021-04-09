@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Montserrat;
   }
   
   .wrapper {
@@ -114,13 +115,28 @@
 .Informasjon { grid-area: Informasjon; }
 .Fargevalg { grid-area: Fargevalg; }
 
+@media only screen and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+        "Overskrift"
+        "Slideshow"
+        "Fargevalg"
+        "Informasjon";
+    }
+   
+}
+
+
 .Overskrift{
     margin-top: 10%;
     /* font-size:--; */
 }
 
-.Informasjon{
-    margin-top: 20px;
+li{
+    padding: 5px;
 }
 
 .fargevalg-button{
@@ -135,6 +151,10 @@
     width: 140px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .fargevalg-tekst{
     margin-top: 0;
     margin-bottom: 0;
@@ -147,7 +167,7 @@
 .fargevalg-boks{
     display: flex;
     flex-direction: row;
-    margin: 30px 0px;
+    margin: 20px 0px;
     justify-content: space-between;
     
 }
