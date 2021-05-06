@@ -3,6 +3,10 @@
     font-family: Montserrat;
   }
   
+  /* ------------------------------------------------*/
+  /* Slideshow:*/
+  /* ------------------------------------------------*/
+
   .wrapper {
     word-wrap: break-word;
     width: 90%;
@@ -98,6 +102,8 @@
 
 
 /* ------------------------------------------------*/
+/* Grid*/
+/* ------------------------------------------------*/
 
 .grid-container {
   display: grid;
@@ -105,17 +111,22 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "Slideshow Slideshow Overskrift Overskrift"
-    "Slideshow Slideshow Informasjon Informasjon"
-    "Slideshow Slideshow Fargevalg Fargevalg"
-    "Slideshow Slideshow Fargevalg Fargevalg";
+    "Slideshow Slideshow Overskrift"
+    "Slideshow Slideshow Informasjon"
+    "Slideshow Slideshow Fargevalg"
+    "Slideshow Slideshow Fargevalg";
 }
 .Slideshow { grid-area: Slideshow; }
 .Overskrift { grid-area: Overskrift; }
 .Informasjon { grid-area: Informasjon; }
 .Fargevalg { grid-area: Fargevalg; }
+.Minnevalg { grid-area: Minnevalg; }
 
-@media only screen and (max-width: 768px){
+/* ------------------------------------------------*/
+/* Media- tilpassing:*/
+/* ------------------------------------------------*/
+
+@media (max-width: 900px){
     .grid-container{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -129,6 +140,14 @@
    
 }
 
+@media (min-width: 1500px){
+  .fargevalg-button{
+    width: 20%;
+  }
+}
+
+
+
 .Overskrift{
     margin-top: 10%;
     /* font-size:--; */
@@ -138,10 +157,14 @@ li{
     padding: 5px;
 }
 
-.fargevalg-button{
+/* ------------------------------------------------*/
+/* Tilpassing av knapper (farge- og minnevalg)*/
+/* ------------------------------------------------*/
+
+.fargevalg-button, .minnevalg-button{
     background:    #ffffff;
     border:        1px solid #000000;
-    border-radius: 11px;
+    border-radius: 5px;
     padding:       5px 30px;
     color:         #000000;
     display:       inline-block;
@@ -154,6 +177,10 @@ button:hover{
     cursor: pointer;
 }
 
+/* ------------------------------------------------*/
+/* Diverse endringer av flexbox*/
+/* ------------------------------------------------*/
+
 .fargevalg-tekst{
     margin-top: 0;
     margin-bottom: 0;
@@ -163,10 +190,15 @@ button:hover{
     width: 20px;
 }
 
-.fargevalg-boks{
+.fargevalg-boks, .minnevalg-boks{
     display: flex;
     flex-direction: row;
     margin: 20px 0px;
-    justify-content: space-between;
+    justify-content:space-between;
     
 }
+
+.minnevalg-button{
+  width: 48%;
+}
+
